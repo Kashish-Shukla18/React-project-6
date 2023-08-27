@@ -32,8 +32,13 @@ export default function Form() {
             }
         })
     }
+     function handleSubmit(event) {
+        event.preventDefault()
+        // submitToApi(formData)
+        console.log(formData)
+    }
     return (
-        <form>
+        <form  onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="First Name"
@@ -120,6 +125,7 @@ export default function Form() {
             </select>
                 
             </fieldset>
+            <button>Submit</button>
             <br />
         </form>
     )
